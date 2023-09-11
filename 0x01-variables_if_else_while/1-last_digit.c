@@ -6,7 +6,7 @@
  * main - Prints last digit or a random number
  * greater than 5, less than 6 or 0
  *
- * Return: Always 0 
+ * Return: Always 0
  */
 int main(void)
 {
@@ -14,7 +14,7 @@ int main(void)
 	int m;
 
 	srand(time(0));
-	n = rand () - RAND_MAX / 2;
+	n = rand() - RAND_MAX / 2;
 	m = n % 10;
 	if (m > 5)
 		printf("Last digit of %d is %d and is greater than 5", n, m);
