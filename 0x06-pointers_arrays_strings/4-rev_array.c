@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * reserve_array - reverse array of intergets
- * @a: arrays
- * @n: elements of array
+ * reverse_array - reverse array of integers
+ * @a: array
+ * @n: elemnts in the array
  *
  * Return: void
  */
