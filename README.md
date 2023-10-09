@@ -1,1 +1,1 @@
-betty scriptting
+Betty scripting
