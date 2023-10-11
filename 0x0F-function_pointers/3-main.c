@@ -11,7 +11,7 @@
  * Return: Always 0
  */
 
-int main(int_attribute_((__unused__)) argc, char *argv[])
+int main (int __attribute__((__unused__)) argc, char *argv[])
 {
 	int num1, num2;
 	char *op;
@@ -31,6 +31,7 @@ int main(int_attribute_((__unused__)) argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
+
 	if ((*op == '/' && num2 == 0) ||
 		(*op == '%' && num2 == 0))
 	{
