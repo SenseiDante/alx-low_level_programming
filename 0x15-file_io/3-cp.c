@@ -71,15 +71,15 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	buffer = create_buffer(argv[2]);
-	from = opne(argv[1], O_RDONLY);
+	from = open(argv[1], O_RDONLY);
 	r = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
-		if (form == -1 || r == -1)
+		if (from == -1 || r == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Error: Can't read from file %s\n", argv[1];
+					"Error: Can't read from file %s\n", argv[1]);
 				free(buffer);
 				exit(98);
 		}
@@ -87,8 +87,8 @@ int main(int argc, char *argv[])
 		w = write(to, buffer, r);
 		if (to == -1 || w == -1)
 		{
-			dprinf(STDERR_FILENO,
-					"Error: Can't write to %s\n", argv[2];
+			dprintf(STDERR_FILENO,
+					"Error: Can't write to %s\n", argv[2]);
 				free(buffer);
 				exit(99);
 		}
